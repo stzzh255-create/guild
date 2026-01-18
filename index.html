@@ -2,614 +2,127 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <title>Profil Satria Alvaro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guild</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        :root {
-            --primary-color: #0a192f;
-            --secondary-color: #112240;
-            --accent-color: #64ffda;
-            --text-color: #e6f1ff;
-            --light-text: #8892b0;
-            --danger-color: #ff5252;
-            --success-color: #4caf50;
-        }
-
         body {
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #000000, #0a0a0a);
+            color: #eafff5;
         }
 
         .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .logo h1 {
-            font-size: 2.8rem;
-            color: var(--accent-color);
-            margin-bottom: 10px;
-            text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
-        }
-
-        .logo span {
-            color: var(--text-color);
-        }
-
-        .logo p {
-            color: var(--light-text);
-            font-size: 1.1rem;
-        }
-
-        /* Login Page Styles */
-        .login-container {
-            background-color: var(--secondary-color);
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            padding: 40px;
-            width: 100%;
-            max-width: 450px;
-            margin: 0 auto;
-            border: 1px solid rgba(100, 255, 218, 0.1);
-        }
-
-        .login-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .login-header h2 {
-            color: var(--accent-color);
-            margin-bottom: 10px;
-        }
-
-        .login-header p {
-            color: var(--light-text);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--text-color);
-            font-weight: 500;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 12px 15px;
-            background-color: rgba(10, 25, 47, 0.7);
-            border: 1px solid rgba(100, 255, 218, 0.2);
-            border-radius: 5px;
-            color: var(--text-color);
-            font-size: 1rem;
-            transition: border 0.3s;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--accent-color);
-        }
-
-        .login-btn {
-            width: 100%;
-            padding: 14px;
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin-top: 10px;
-        }
-
-        .login-btn:hover {
-            background-color: #52d4b6;
-            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
-        }
-
-        .error-message {
-            background-color: rgba(255, 82, 82, 0.1);
-            border: 1px solid var(--danger-color);
-            border-radius: 5px;
-            padding: 12px;
-            margin-bottom: 20px;
-            color: var(--danger-color);
-            display: none;
-        }
-
-        /* Dashboard Styles */
-        .dashboard-container {
-            display: none;
-            width: 100%;
-        }
-
-        .dashboard-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
+            max-width: 800px;
+            margin: auto;
             padding: 20px;
-            background-color: var(--secondary-color);
-            border-radius: 10px;
-            border: 1px solid rgba(100, 255, 218, 0.1);
-        }
-
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .avatar {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--accent-color), #0a192f);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .logout-btn {
-            padding: 10px 20px;
-            background-color: transparent;
-            color: var(--accent-color);
-            border: 1px solid var(--accent-color);
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .logout-btn:hover {
-            background-color: rgba(100, 255, 218, 0.1);
-        }
-
-        .dashboard-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
         }
 
         .card {
-            background-color: var(--secondary-color);
-            border-radius: 10px;
+            background-color: #050505;
+            border-radius: 15px;
             padding: 25px;
-            border: 1px solid rgba(100, 255, 218, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 25px rgba(0,255,153,0.3);
+            border: 2px solid #00ff99;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            color: var(--accent-color);
-        }
-
-        .card-header i {
-            font-size: 1.5rem;
-            margin-right: 15px;
-        }
-
-        .card-header h3 {
-            font-size: 1.4rem;
-        }
-
-        .members-list {
-            list-style-type: none;
-        }
-
-        .member-item {
-            display: flex;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(136, 146, 176, 0.1);
-        }
-
-        .member-item:last-child {
-            border-bottom: none;
-        }
-
-        .member-rank {
-            width: 30px;
-            height: 30px;
-            background-color: var(--primary-color);
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-weight: bold;
-            color: var(--accent-color);
-        }
-
-        .member-info h4 {
-            color: var(--text-color);
-            margin-bottom: 5px;
-        }
-
-        .member-info p {
-            color: var(--light-text);
-            font-size: 0.9rem;
-        }
-
-        .stats-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            background-color: var(--secondary-color);
-            border-radius: 10px;
-            padding: 20px;
+        h1 {
             text-align: center;
-            border: 1px solid rgba(100, 255, 218, 0.1);
-        }
-
-        .stat-value {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--accent-color);
+            color: #00ff99;
             margin-bottom: 10px;
         }
 
-        .stat-label {
-            color: var(--light-text);
-            font-size: 1rem;
-        }
-
-        .footer {
+        h2 {
             text-align: center;
-            color: var(--light-text);
-            padding: 20px;
-            font-size: 0.9rem;
-            margin-top: 20px;
-            border-top: 1px solid rgba(136, 146, 176, 0.1);
-            width: 100%;
+            color: #66ffcc;
+            margin-top: 0;
         }
 
-        @media (max-width: 768px) {
-            .login-container {
-                padding: 30px 20px;
-            }
-            
-            .dashboard-header {
-                flex-direction: column;
-                gap: 20px;
-                align-items: flex-start;
-            }
-            
-            .logo h1 {
-                font-size: 2.2rem;
-            }
+        .photo {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .photo img {
+            width: 200px;
+            border-radius: 12px;
+            border: 3px solid #00ff99;
+            box-shadow: 0 0 15px #00ff99;
+        }
+
+        .info {
+            margin-top: 20px;
+        }
+
+        .info p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin: 12px 0;
+        }
+
+        .label {
+            color: #00ff99;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #66ffcc;
+            font-size: 14px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            background-color: #00ff99;
+            color: #000;
+            font-size: 13px;
+            margin: 5px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Logo Section -->
-        <div class="logo">
-            <h1>Guild <span>no</span></h1>
-            <p>Website Resmi Anggota Guild</p>
+
+<div class="container">
+    <div class="card">
+
+        <h1>Profil Pribadi</h1>
+        <h2>Satria Alvaro</h2>
+
+        <div class="photo">
+            <img src="https://files.catbox.moe/a223m4.jpeg" alt="Foto Hacker">
         </div>
 
-        <!-- Login Container (Visible by default) -->
-        <div id="loginContainer" class="login-container">
-            <div class="login-header">
-                <h2>Masuk ke Dashboard</h2>
-                <p>Gunakan kredensial yang diberikan oleh admin</p>
-            </div>
-            
-            <div id="errorMessage" class="error-message">
-                Username atau password salah. Silakan coba lagi.
-            </div>
-            
-            <form id="loginForm">
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" placeholder="Masukkan username" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Masukkan password" required>
-                </div>
-                <button type="submit" class="login-btn">
-                    <i class="fas fa-sign-in-alt"></i> Masuk ke Dashboard
-                </button>
-            </form>
+        <div class="info">
+            <p><span class="label">Nama:</span> Satria Alvaro</p>
+            <p><span class="label">Sekolah:</span> SDN Plaosan 1</p>
+            <p><span class="label">Hobi:</span> Bermain Game</p>
+            <p><span class="label">Minat:</span> Teknologi & Dunia Komputer</p>
+
+            <p>
+                Saya adalah siswa SDN Plaosan 1 yang suka belajar hal baru.
+                Saya tertarik pada dunia game dan teknologi.
+                Tema hacker di halaman ini melambangkan semangat belajar,
+                bukan untuk hal negatif.
+            </p>
         </div>
 
-        <!-- Dashboard Container (Hidden by default) -->
-        <div id="dashboardContainer" class="dashboard-container">
-            <div class="dashboard-header">
-                <div class="user-info">
-                    <div class="avatar" id="userAvatar">U</div>
-                    <div>
-                        <h2 id="userName">User</h2>
-                        <p id="userRole">Anggota Guild</p>
-                    </div>
-                </div>
-                <button id="logoutBtn" class="logout-btn">
-                    <i class="fas fa-sign-out-alt"></i> Logout
-                </button>
-            </div>
-
-            <div class="stats-container">
-                <div class="stat-card">
-                    <div class="stat-value" id="totalMembers">0</div>
-                    <div class="stat-label">Total Anggota</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="activeMembers">0</div>
-                    <div class="stat-label">Anggota Aktif</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="guildLevel">1</div>
-                    <div class="stat-label">Level Guild</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="totalPoints">0</div>
-                    <div class="stat-label">Total Poin Guild</div>
-                </div>
-            </div>
-
-            <div class="dashboard-content">
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-users"></i>
-                        <h3>Anggota Teratas</h3>
-                    </div>
-                    <ul class="members-list" id="topMembers">
-                        <!-- Data anggota akan dimuat di sini -->
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-calendar-alt"></i>
-                        <h3>Event Mendatang</h3>
-                    </div>
-                    <div id="upcomingEvents">
-                        <p><strong>Raid Boss:</strong> Sabtu, 20.00 WIB</p>
-                        <p><strong>PvP Tournament:</strong> Minggu, 19.00 WIB</p>
-                        <p><strong>Guild Meeting:</strong> Senin, 21.00 WIB</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-trophy"></i>
-                        <h3>Prestasi Guild</h3>
-                    </div>
-                    <div id="guildAchievements">
-                        <p><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> engga ada njir</p>
-                        <p><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> Raid Boss Bulan Ini Selesai</p>
-                        <p><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> Mencapai Leve 1 Guild</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-bullhorn"></i>
-                        <h3>Pengumuman</h3>
-                    </div>
-                    <div id="announcements">
-                        <p><strong>Penting:</strong> Seluruh anggota diharapkan hadir dalam guild wars Sabtu depan.</p>
-                        <p><strong>Update:</strong> Peraturan guild telah diperbarui, harap dibaca.</p>
-                    </div>
-                </div>
-            </div>
+        <div style="text-align:center; margin-top:20px;">
+            <span class="badge">🎮 Gamer</span>
+            <span class="badge">💻 Tech</span>
+            <span class="badge">📚 Pelajar</span>
         </div>
+
     </div>
 
-    <div class="footer">
-        <p>© 2025 Guild Semua 0. Hak cipta dilindungi.</p>
-        <p>Portal ini hanya untuk anggota guild yang terdaftar.</p>
-    </div>
+    <footer>
+        © 2026 | Satria Alvaro | SDN Plaosan 1
+    </footer>
+</div>
 
-    <script>
-        // Data login yang valid (biasanya ini akan disimpan di file list.json terpisah)
-        // Untuk simulasi, kita akan gunakan data statis di sini
-        const validUsers = [
-            { username: "admin", password: "admin123", name: "Admin Utama", role: "Pemimpin Guild", avatar: "A" },
-        ];
-
-        // Data anggota guild
-        const guildMembers = [
-            { name: "Admin Utama", rank: 1, role: "Pemimpin Guild", points: 12500, status: "online" },
-        ];
-
-        // Elemen DOM
-        const loginContainer = document.getElementById('loginContainer');
-        const dashboardContainer = document.getElementById('dashboardContainer');
-        const loginForm = document.getElementById('loginForm');
-        const errorMessage = document.getElementById('errorMessage');
-        const logoutBtn = document.getElementById('logoutBtn');
-        const userName = document.getElementById('userName');
-        const userRole = document.getElementById('userRole');
-        const userAvatar = document.getElementById('userAvatar');
-        const topMembersList = document.getElementById('topMembers');
-        const totalMembersEl = document.getElementById('totalMembers');
-        const activeMembersEl = document.getElementById('activeMembers');
-        const guildLevelEl = document.getElementById('guildLevel');
-        const totalPointsEl = document.getElementById('totalPoints');
-
-        // Fungsi untuk menampilkan dashboard
-        function showDashboard(user) {
-            loginContainer.style.display = 'none';
-            dashboardContainer.style.display = 'block';
-            
-            // Set informasi pengguna
-            userName.textContent = user.name;
-            userRole.textContent = user.role;
-            userAvatar.textContent = user.avatar;
-            
-            // Update statistik guild
-            updateGuildStats();
-            
-            // Tampilkan anggota teratas
-            displayTopMembers();
-        }
-
-        // Fungsi untuk memperbarui statistik guild
-        function updateGuildStats() {
-            totalMembersEl.textContent = guildMembers.length;
-            
-            // Hitung anggota aktif (status online)
-            const activeMembers = guildMembers.filter(member => member.status === 'online').length;
-            activeMembersEl.textContent = activeMembers;
-            
-            // Hitung total poin
-            const totalPoints = guildMembers.reduce((sum, member) => sum + member.points, 0);
-            totalPointsEl.textContent = totalPoints.toLocaleString();
-            
-            // Hitung level guild berdasarkan total poin
-            const guildLevel = Math.floor(totalPoints / 10000) + 1;
-            guildLevelEl.textContent = guildLevel;
-        }
-
-        // Fungsi untuk menampilkan anggota teratas
-        function displayTopMembers() {
-            // Urutkan anggota berdasarkan poin (tertinggi ke terendah)
-            const sortedMembers = [...guildMembers].sort((a, b) => b.points - a.points);
-            
-            // Ambil 5 anggota teratas
-            const topMembers = sortedMembers.slice(0, 5);
-            
-            // Kosongkan daftar sebelumnya
-            topMembersList.innerHTML = '';
-            
-            // Tambahkan anggota ke daftar
-            topMembers.forEach(member => {
-                const memberItem = document.createElement('li');
-                memberItem.className = 'member-item';
-                
-                // Tentukan ikon status
-                let statusIcon = '●';
-                let statusColor = '#ccc'; // default untuk offline
-                
-                if (member.status === 'online') {
-                    statusIcon = '●';
-                    statusColor = '#4caf50';
-                } else if (member.status === 'away') {
-                    statusIcon = '●';
-                    statusColor = '#ff9800';
-                }
-                
-                memberItem.innerHTML = `
-                    <div class="member-rank">${member.rank}</div>
-                    <div class="member-info">
-                        <h4>${member.name} <span style="color: ${statusColor}; font-size: 0.8rem;">${statusIcon}</span></h4>
-                        <p>${member.role} • ${member.points.toLocaleString()} poin</p>
-                    </div>
-                `;
-                
-                topMembersList.appendChild(memberItem);
-            });
-        }
-
-        // Fungsi untuk menangani login
-        function handleLogin(event) {
-            event.preventDefault();
-            
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            
-            // Cari pengguna yang cocok
-            const user = validUsers.find(u => u.username === username && u.password === password);
-            
-            if (user) {
-                // Login berhasil
-                errorMessage.style.display = 'none';
-                showDashboard(user);
-                
-                // Simpan status login di localStorage (opsional)
-                localStorage.setItem('guildLoggedIn', 'true');
-                localStorage.setItem('guildUser', JSON.stringify(user));
-            } else {
-                // Login gagal
-                errorMessage.style.display = 'block';
-            }
-        }
-
-        // Fungsi untuk logout
-        function handleLogout() {
-            // Sembunyikan dashboard dan tampilkan login
-            dashboardContainer.style.display = 'none';
-            loginContainer.style.display = 'block';
-            
-            // Reset form login
-            loginForm.reset();
-            
-            // Hapus status login dari localStorage
-            localStorage.removeItem('guildLoggedIn');
-            localStorage.removeItem('guildUser');
-        }
-
-        // Cek apakah pengguna sudah login (dari localStorage)
-        function checkLoginStatus() {
-            const isLoggedIn = localStorage.getItem('guildLoggedIn');
-            const savedUser = localStorage.getItem('guildUser');
-            
-            if (isLoggedIn && savedUser) {
-                try {
-                    const user = JSON.parse(savedUser);
-                    showDashboard(user);
-                } catch (e) {
-                    // Jika ada error, tetap tampilkan login
-                    console.error("Error parsing saved user:", e);
-                }
-            }
-        }
-
-        // Event listeners
-        loginForm.addEventListener('submit', handleLogin);
-        logoutBtn.addEventListener('click', handleLogout);
-
-        // Cek status login saat halaman dimuat
-        document.addEventListener('DOMContentLoaded', function() {
-            checkLoginStatus();
-            // Simulasi file list.json (data login)
-            console.log("Data login (list.json) tersedia dengan", validUsers.length, "pengguna");
-            console.log("Data anggota guild tersedia dengan", guildMembers.length, "anggota");
-        });
-    </script>
 </body>
 </html>
